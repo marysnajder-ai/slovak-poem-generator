@@ -29,12 +29,14 @@ function generatePoem(event) {
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "7d9d8aed460317f0t10f235204bb13o9";
   let context =
-    "You are a Slovak nature poem expert. Write a 4 line poem in basic HTML and separate each line with a <br />.";
-  let prompt = `User instructions: Generate a poem about ${instructionsInput.value}`;
+    "You are a Slovakian nature poem expert. Write a 4 line poem in basic HTML and separate each line with a <br />.";
+  let prompt = `User instructions: Generate a poem in english language about ${instructionsInput.value}`;
 
-  let poemElement = document.querySelector("#poem");
+  const poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
-  poemElement.innerHTML = `⏳ Generating a Slovak poem about ${instructionsInput.value}...`;
+  poemElement.innerHTML = `
+    <span class="generating">⏳ Generating a Slovak poem about "${instructionsInput.value}"<span class="dots"></span></span>
+  `;
 
   const apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
     prompt
