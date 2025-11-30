@@ -65,9 +65,10 @@ form input[type="submit"]:hover {
   background: #0060d1;
 }
 
-main div {
+.hidden {
   display: none;
 }
+
 #poem-output {
   margin-top: 30px;
   text-align: center;

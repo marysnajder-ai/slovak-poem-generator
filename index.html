@@ -15,12 +15,13 @@
         <h1> Welcome to the Slovak poem generator</h1>
     </header>
     <main>
-        <form action="">
-            <input type="text" placeholder="Enter a topic for the poem" autofocus required autocomplete="off">
-            <input type="submit">
+        <form id="poem-generator-form" action="">
+            <input type="text" id="user-instructions" placeholder="Enter a topic for the poem" autofocus required
+                autocomplete="off">
+            <input type="submit" value="Generate">
         </form>
-        <div id="poem-output">
-            poem
+        <div id="poem" class="hidden">
+
         </div>
     </main>
 
